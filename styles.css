@@ -344,6 +344,13 @@ nav a.on {
   aspect-ratio: 4/3;
   padding: 1rem;
 }
+.photo {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+  border-radius: var(--r);
+  height: 600px;
+}
 .ph::before {
   content: "";
   position: absolute;
@@ -360,7 +367,7 @@ nav a.on {
   padding: 0.35rem 0.8rem;
   border-radius: 999px;
 }
-.hero .ph {
+.hero .photo {
   aspect-ratio: 4/5;
   border-radius: var(--r);
   box-shadow: 0 30px 60px rgba(0, 0, 0, 0.35);
@@ -404,7 +411,7 @@ nav a.on {
   .hero .wrap {
     grid-template-columns: 1fr;
   }
-  .hero .ph {
+  .hero .photo {
     aspect-ratio: 16/10;
     border-radius: var(--r);
   }
@@ -574,21 +581,27 @@ nav a.on {
   gap: 1rem;
   grid-template-columns: repeat(4, 1fr);
 }
-.gal .ph:nth-child(1) {
+.gal .photo:nth-child(1) {
   grid-column: span 2;
   grid-row: span 2;
   aspect-ratio: auto;
   min-height: 300px;
 }
-.gal .ph {
+.gal .photo {
   aspect-ratio: 1;
 }
 @media (max-width: 700px) {
   .gal {
     grid-template-columns: 1fr 1fr;
   }
-  .gal .ph:nth-child(1) {
+  .gal .photo:nth-child(1) {
     min-height: 220px;
+  }
+}
+
+@media (max-width: 380px) {
+  .extra div {
+    font-size: 13px;
   }
 }
 
